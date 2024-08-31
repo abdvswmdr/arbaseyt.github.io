@@ -67,7 +67,7 @@
                         <li class="current">Project Details</li>
                     </ol>
                 </nav>
-                <h1>Battery Discharge Rig (2023)</h1>
+                <h1>Vertical Lift Conveyor (2023)</h1>
             </div>
         </div><!-- End Page Title -->
 
@@ -129,106 +129,108 @@
                         <div class="portfolio-description">
                             <h2>Overview</h2>
                             <p>
-                                As part of my job as an engineering intern at Alphaswift Industries, one of the projects
-                                I worked on was the design of a battery discharge rig. I was responsible for refining
-                                the mechanical design, soldering and electrical integration and further developing the
-                                firmware for the system.The discharge rig would test the perfomance of batteries and
-                                also discharge the drone batteries while not in use for safety reasons.
-
+                                As part of a simulation study using SolidWorks, I designed a vertical lift conveyor to
+                                address the challenges of efficient vertical transportation of goods in
+                                space-constrained industrial environments.The project aimed to design a compact,
+                                reliable conveyor system capable of moving objects vertically within a limited
+                                footprint. The core mechanism of the Vertical Lift Conveyor is based on a bevel gear system working
+                                in tandem with a threaded shaft. This design ensures precise vertical movement, with the
+                                bevel gears efficiently transmitting power through perpendicular axes. The bevel gear’s
+                                self-locking capability prevents the platform from descending under
+                                its own weight when the motor is not powered.
                             </p>
 
 
                             <p style="text-align: center;">
-                                <img src="assets/img/portfolio/rack2.png" alt="Battery Discharge Rig assembly"
-                                    class="img-fluid" style="width:48%; height:500px; display: inline-block;">
-                                <img src="assets/img/portfolio/rack1.png" alt="CAD model rig" class="img-fluid"
-                                    style="width:49%; height:500px; display: inline-block;">
+                                <img src="assets/img/portfolio/bevel2.png" alt="CAD bevel (no motor)"
+                                    class="img-fluid" style="width:45%; height:300px; display: inline-block;">
+                                <img src="assets/img/portfolio/bevel1.png" alt="CAD bevel (motor mounted)" class="img-fluid"
+                                    style="width:45%; height:300px; display: inline-block;">
                             </p>
                             <p style="text-align: center;">
                             <figcaption style="font-style: italic; font-size: smaller; text-align: center;">Right:
-                                Assembled Battery Discharge Rig | Left: Battery Discharge Rig CAD model</figcaption>
+                                Assembled Bevel gear without motor | Left: Bevel gear setup with motor mounted</figcaption>
                             </p>
-
+                          
 
                             <p>
-                                Some other tasks were solding Battery Current Regulators (BCRs) and PCBs, mostly having
-                                surface-mount devices(SMDs). I also soldered eight custom made Arduino Megas that would
-                                manage the system's control logic. Although I cannot disclose much information about the
-                                design features, this overview summarises the whole system, but it would later undergo
-                                many future iterations and modifications.
+                                The main frame and platform of the Vertical Lift Conveyor are designed to provide
+                                stability and support for the system, accommodating a maximum load of 3 kg on a 300 mm x
+                                300 mm surface. The platform, attached to a threaded shaft, ensures precise vertical
+                                motion, while parallel rails with strategic gaps allow for secure load transfer without
+                                manual intervention. A reducing motor coupler facilitates the efficient transmission of
+                                torque from the motor to the threaded shaft, ensuring controlled and reliable operation
+                                throughout the lifting process.
                             </p>
 
                             <br>
+
 
                             <p style="text-align: center;">
-                                <img src="assets/img/portfolio/rig_overview.png" alt="Battery Discharge Rig Overview"
-                                    class="img-fluid" style="width:95%; height:500px;">
-                            <figcaption style="font-style: italic; font-size: smaller; text-align: center;">Battery
-                                Discharge Rig Overview and Schematics</figcaption>
-                            </figcaption>
+                                <img src="assets/img/portfolio/stte2.png" alt="frame"
+                                    class="img-fluid" style="width:48%; height:460px; display: inline-block;">
+                                <img src="assets/img/portfolio/stte1.png" alt="platform" class="img-fluid"
+                                    style="width:49%; height:460px; display: inline-block;">
+                            </p>
+                            <p style="text-align: center;">
+                            <figcaption style="font-style: italic; font-size: smaller; text-align: center;">Right:
+                                Main frame design | Left: Platform frame design</figcaption>
                             </p>
 
                             <br>
 
                             <p>
-                                A battery box I designed would be used to house the batteries during the discharge
-                                tests. Fire-resistant materials like steel and tempered glass were used to isolate the
-                                battery in case of thermal runaway or fire incidents.
+                                The conveyor system is powered by a brushed DC motor controlled via Cytron’s MD25HV
+                                motor driver. This driver was selected for its compatibility with the motor's voltage
+                                and current requirements, as well as its safety features like overcurrent and
+                                temperature protection, which are critical for reliable operation.
 
-                            <p style="text-align: center;"> <img src="assets/img/portfolio/battery_case.png"
-                                    alt="Battery Box Design" class="img-fluid" style="width: 90%; height: 300px;">
+                            <p style="text-align: center;"> <img src="assets/img/portfolio/MD25.png"
+                                    alt="Drive Circuit Design" class="img-fluid" style="width: 90%; height: 400px;">
                             <figcaption style="font-style: italic; font-size: smaller; text-align: center;">
-                                Fire-resistant battery box designed to contain potential hazards during discharge tests.
+                                Cytron MD25HV - single-channel DC motor driver - 7V-58V / 25A
                             </figcaption>
                             </p>
 
                             </p>
 
                             <p>
-                                Ensuring reliable data communication between the Arduino MCUs and the central control
-                                unit was quite a challenge. I engaged in troubleshooting UART communication issues and
-                                debugging tools like oscilloscope to identify and fix data transmission failures.
+                                The system incorporates Omron E3ZLR66 photoelectric sensors for load detection and Omron
+                                E2Q6 proximity sensors for precise positioning of the platform. These sensors ensure
+                                that the conveyor operates efficiently and safely by initiating movement only when
+                                necessary and stopping the platform accurately at the desired height.
+                            </p>
 
-                            <p style="text-align: center;"> <img src="assets/img/uart_troubleshooting.jpg"
-                                    alt="UART Communication Troubleshooting" class="img-fluid"
-                                    style="width: 60%; height: auto;">
+
+                            <p style="text-align: center;">
+                                <img src="assets/img/portfolio/omron.png" alt="Omron E3ZLR66 Photoelectric Sensor"
+                                    class="img-fluid" style="width: 90%; height: 400px;">
                             <figcaption style="font-style: italic; font-size: smaller; text-align: center;">
-                                Troubleshooting UART communication using an oscilloscope.</figcaption>
+                                Omron E3ZLR66 - Photoelectric Sensor
+                            </figcaption>
                             </p>
 
-
-                            I contributed to the development and testing of the temperature and voltage sensing
-                            circuits, to monitor battery's condition during discharge. The temeperature was made using
-                            an NTC (Negative Temperature Coefficient) thermistor and the voltage sensing was done using
-                            a voltage divider circuit. The data was then sent to the central control unit for processing
-                            and display. The control system was developed using a PID control algorithm. so as to adjust
-                            the current draw to keep the battery within safe operating limits.
-
-
-                            <p style="text-align: center;"> <img src="assets/img/portfolio/uart.png"
-                                    alt="UART Communication Troubleshooting" class="img-fluid"
-                                    style="width: 90%; height: auto;">
+                            <p style="text-align: center;">
+                                <img src="assets/img/portfolio/EQ26.png" alt="EQ26 Proximity Sensor" class="img-fluid"
+                                    style="width: 90%; height: 400px;">
                             <figcaption style="font-style: italic; font-size: smaller; text-align: center;">
-                                UART connection and microcontroller programming for the sensing units</figcaption>
+                                E2Q6 Proximity Sensor mounted on the Main Platform
+                            </figcaption>
                             </p>
-                            </p>
+
+
+
+
 
                             <br>
 
-                            <p>For more details, you can view the full project on GitHub or download the project report:
+                            <p>For more details, you can view the project report:
                             </p>
                             <ul>
                                 <li><a href="https://github.com/abdvswmdr/battery_rig_code">GitHub Repository</a></li>
                                 <li><a
-                                        href="https://drive.google.com/file/d/1K5Fm0hClgeC2V--IV0s5tMTSJZseJbN3/view?usp=sharing">Project
-                                        Interim Report</a></li>
-                                <li><a href="https://drive.google.com/file/d/1KbHW3LPqrqrzruJUVn3QTI4XhsFsk3LB/view">Manuals:
-                                        Voltage and Temperature Sensing</a></li>
-                                <li><a href="https://drive.google.com/file/d/1pb38Mnol8Bjx_-DedN9vfA5wZNMLMEID/view">CD74HC4051
-                                        MUX</a></li>
-                                <li><a
-                                        href="https://drive.google.com/file/d/1ACNDsneFFLJ2bkk_dGROsWoA2dp0bfV3/view?usp=sharing">Solid
-                                        State Switch controller</a></li>
+                                        href="https://drive.google.com/file/d/1K5Fm0hClgeC2V--IV0s5tMTSJZseJbN3/view?usp=sharing">Design
+                                        Portfolio Report</a></li>
                             </ul>
 
                             </p>
